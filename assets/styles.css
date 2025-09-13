@@ -102,3 +102,14 @@ section{padding:72px 0}
 @media (max-width: 600px){
   .benefits .grid,.services .grid,.pricing .grid,.pane .grid,.trust .stats{grid-template-columns:1fr}
 }
+
+/* Contact Form Enhancements */
+.form.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.form .field{display:flex;flex-direction:column;gap:6px}
+.form label{font-weight:600;color:#0b1f53}
+.form input,.form textarea{transition:border-color .2s ease, box-shadow .2s ease}
+.form input:focus,.form textarea:focus{border-color:var(--secondary);outline:none;box-shadow:0 0 0 3px rgba(20,184,166,0.15)}
+.form .full{grid-column:1 / -1}
+@media (max-width:600px){
+  .form.two-col{grid-template-columns:1fr}
+}
