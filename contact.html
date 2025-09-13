@@ -36,17 +36,27 @@
         <div id="contact-form" class="card">
           <!-- Formspree form -->
           <!-- modify this form HTML and place wherever you want your form -->
-          <form action="https://formspree.io/f/xqadjwrb" method="POST">
-            <label>
-              Your email:
-              <input type="email" name="email">
-            </label>
-            <label>
-              Your message:
-              <textarea name="message"></textarea>
-            </label>
-            <!-- your other form fields go here -->
-            <button type="submit">Send</button>
+          <form action="https://formspree.io/f/xqadjwrb" method="POST" class="form two-col" id="contactForm">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="field full">
+              <label for="phone">Your phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+255 700 000 000">
+            </div>
+            <div class="field full">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell me about your processes, goals, and timeline..." required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New Contact Form Message">
+            <div class="full">
+              <button type="submit" class="btn primary">Send Message</button>
+            </div>
           </form>
         </div>
         <div class="card" style="margin-top:16px;display:flex;gap:12px;align-items:center;justify-content:space-between">
@@ -89,8 +99,5 @@
 <script src="assets/scripts.js"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
-  <script src="contact-form-free-2024-1/fcf-assets/js/lang/fcf.en.js"></script>
-  <script src="contact-form-free-2024-1/fcf-assets/js/fcf.just-validate.min.js"></script>
-  <script src="contact-form-free-2024-1/fcf-assets/js/fcf.form.js"></script>
 </body>
 </html>
