@@ -33,29 +33,30 @@
         <h2 class="section-title">Contact</h2>
         <p class="section-sub">Tell me about your business and what you want to improve.</p>
         <!-- Integrated FreeContactForm (FCF) -->
-        <div id="contact-form" class="card">
+        <div id="contact-form" class="card form-card">
           <!-- Formspree form -->
-          <!-- modify this form HTML and place wherever you want your form -->
           <form action="https://formspree.io/f/xqadjwrb" method="POST" class="form two-col" id="contactForm">
             <div class="field">
               <label for="name">Your name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
+              <input type="text" id="name" name="name" placeholder="John Mwangi" autocomplete="name" required>
             </div>
             <div class="field">
               <label for="email">Your email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
             </div>
             <div class="field full">
               <label for="phone">Your phone (optional)</label>
-              <input type="tel" id="phone" name="phone" placeholder="+255 700 000 000">
+              <input type="tel" id="phone" name="phone" placeholder="+255 767 000 000" autocomplete="tel">
+              <small class="help">Include country code if outside Tanzania.</small>
             </div>
             <div class="field full">
               <label for="message">Your message</label>
               <textarea id="message" name="message" rows="6" placeholder="Tell me about your processes, goals, and timeline..." required></textarea>
             </div>
             <input type="hidden" name="_subject" value="New Contact Form Message">
-            <div class="full">
+            <div class="actions">
               <button type="submit" class="btn primary">Send Message</button>
+              <span class="privacy">By sending, you agree to be contacted about your request.</span>
             </div>
           </form>
         </div>
