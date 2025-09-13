@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Business Process Consultant Tanzania</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container row">
+    <div class="brand"><div class="logo">BP</div><h1>Business Process Consultant</h1></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="cta-group">
+      <a class="btn ghost" href="https://businessprocessconsultant.setmore.com" target="_blank" rel="noopener">Book Now</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="container grid" style="grid-template-columns:1.1fr 1fr;align-items:start">
+      <div>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Tell me about your business and what you want to improve.</p>
+        <form class="form card" action="https://api.web3forms.com/submit" method="POST">
+          <!-- TODO: Replace with your Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+          <div class="grid" style="grid-template-columns:1fr 1fr">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="business" placeholder="Business Name">
+          </div>
+          <div class="grid" style="grid-template-columns:1fr 1fr">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Phone (or WhatsApp)">
+          </div>
+          <select name="category">
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Process Audit">Process Audit</option>
+            <option value="Workflow Automation">Workflow Automation</option>
+            <option value="CRM Setup">CRM Setup</option>
+          </select>
+          <textarea name="message" rows="6" placeholder="Message" required></textarea>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+        <div class="card" style="margin-top:16px;display:flex;gap:12px;align-items:center;justify-content:space-between">
+          <div>
+            <strong>Prefer to book directly?</strong>
+            <p class="small">Pick a time that works for you.</p>
+          </div>
+          <a class="btn secondary" href="https://businessprocessconsultant.setmore.com" target="_blank" rel="noopener">Book on Setmore</a>
+        </div>
+      </div>
+      <aside class="grid" style="gap:16px">
+        <div class="card">
+          <h3>WhatsApp</h3>
+          <p class="small">Chat instantly on WhatsApp.</p>
+          <a class="btn primary" href="https://wa.me/255700000000" target="_blank" rel="noopener">Open WhatsApp</a>
+          <!-- TODO: replace with your WhatsApp number -->
+        </div>
+        <div class="card">
+          <h3>Location</h3>
+          <p class="small">Dar es Salaam, Tanzania</p>
+          <div style="overflow:hidden;border-radius:10px">
+            <iframe title="Dar es Salaam Map" src="https://www.google.com/maps?q=Dar%20es%20Salaam%2C%20Tanzania&output=embed" width="100%" height="260" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p class="small">© <span id="y"></span> Business Process Consultant Tanzania.</p>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/255700000000" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
+  <img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="WhatsApp">
+</a>
+
+<script src="assets/scripts.js"></script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
