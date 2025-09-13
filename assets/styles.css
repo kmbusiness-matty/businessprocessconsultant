@@ -1,0 +1,104 @@
+/* Global Styles */
+:root{
+  --primary:#1E3A8A; /* Deep Blue */
+  --secondary:#14B8A6; /* Bright Teal */
+  --accent:#FACC15; /* Gold */
+  --bg:#F7F7FA; /* Light background */
+  --text:#1F2937; /* Gray-800 */
+  --muted:#6B7280; /* Gray-500 */
+  --white:#FFFFFF;
+  --card:#FFFFFF;
+  --shadow:0 6px 24px rgba(0,0,0,0.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Open Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:var(--secondary);text-decoration:none}
+.container{width:min(1200px,92%);margin:0 auto}
+.grid{display:grid;gap:24px}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:700}
+.btn.primary{background:var(--secondary);color:#00323A}
+.btn.primary:hover{filter:brightness(0.95)}
+.btn.secondary{background:var(--accent);color:#6B4D00}
+.btn.ghost{border:2px solid var(--secondary);color:var(--secondary)}
+.tag{display:inline-block;padding:4px 10px;border-radius:999px;background:#E0F7F4;color:#0C6B62;font-weight:600;font-size:13px}
+section{padding:72px 0}
+.section-title{font-family:"Montserrat", Poppins, Arial, sans-serif;font-weight:800;font-size:36px;line-height:1.15;margin:0 0 12px;color:var(--primary)}
+.section-sub{color:var(--muted);margin:0 0 28px}
+.card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:24px}
+.small{font-size:14px;color:var(--muted)}
+
+/* Header */
+.header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.92);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #eef0f4}
+.header .row{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#0f2a66);display:grid;place-items:center;color:#fff;font-weight:800}
+.brand h1{font-family:"Montserrat", Poppins, Arial, sans-serif;font-size:18px;margin:0;color:var(--primary)}
+.nav{display:flex;align-items:center;gap:22px}
+.nav a{color:#334155;font-weight:600}
+.cta-group{display:flex;gap:10px;align-items:center}
+.lang{min-width:160px}
+
+/* Hero */
+.hero{padding:80px 0;background:linear-gradient(180deg,#ffffff, #f3f7ff)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}
+.kpi{background:#0b1f53;color:#c7d2fe;border-radius:12px;padding:12px 14px;text-align:center}
+.kpi strong{display:block;color:#fff;font-size:22px}
+.hero h2{font-family:"Montserrat", Poppins, Arial, sans-serif;font-size:46px;line-height:1.1;margin:0 0 12px;color:#0b1f53}
+.hero p{color:#475569}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+
+/* Benefits */
+.benefits .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.benefit{display:flex;gap:14px}
+.benefit .icon{width:44px;height:44px;border-radius:10px;background:#E6EEFF;display:grid;place-items:center;color:#173B8E}
+
+/* Services */
+.services .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.services .card h3{margin:6px 0 8px}
+
+/* Pricing */
+.pricing .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.price{font-size:28px;font-weight:800;color:#0b1f53}
+
+/* Industry Tabs */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tab{padding:8px 14px;border-radius:999px;border:1px solid #dbe3ff;font-weight:700;color:#173B8E;background:#fff;cursor:pointer}
+.tab.active{background:#173B8E;color:#fff}
+.tabpanes>.pane{display:none}
+.tabpanes>.pane.active{display:block}
+.pane .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+/* Trust */
+.trust .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.stat{background:#051336;color:#C7D2FE;border-radius:14px;padding:18px;text-align:center}
+.stat strong{display:block;color:#fff;font-size:26px}
+
+/* Blog Preview */
+.blog-preview .grid{grid-template-columns:2fr 1fr}
+
+/* Footer */
+.footer{background:#0b1f53;color:#c7d2fe;padding:40px 0}
+.footer a{color:#c7d2fe}
+
+/* Contact */
+.form{display:grid;gap:12px}
+.form input,.form textarea, .form select{padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;background:#fff;font:inherit}
+.form button{border:0}
+
+/* WhatsApp Floating */
+.whatsapp{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 25px rgba(0,0,0,0.15);z-index:1000}
+.whatsapp img{width:26px;height:26px;filter:none}
+
+/* Responsive */
+@media (max-width: 992px){
+  .hero .wrap{grid-template-columns:1fr}
+  .benefits .grid{grid-template-columns:repeat(2,1fr)}
+  .services .grid,.pricing .grid,.pane .grid{grid-template-columns:repeat(2,1fr)}
+  .blog-preview .grid{grid-template-columns:1fr}
+  .trust .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 600px){
+  .benefits .grid,.services .grid,.pricing .grid,.pane .grid,.trust .stats{grid-template-columns:1fr}
+}
