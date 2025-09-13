@@ -44,8 +44,8 @@
         <div class="actions">
           <!-- Primary CTA: Setmore booking -->
           <a class="btn primary" href="https://businessprocessconsultant.setmore.com" target="_blank" rel="noopener">Book a Free Consultation</a>
-          <!-- Secondary CTA: Lead magnet via Web3Forms in modal -->
-          <button class="btn secondary" type="button" data-open-lead>Download Free Guide</button>
+          <!-- Secondary CTA: Link to Contact form instead of Web3Forms modal -->
+          <a class="btn secondary" href="contact.html#contact-form">Download Free Guide</a>
         </div>
         <div class="kpis">
           <div class="kpi"><strong>40%+</strong><span>Process time saved</span></div>
@@ -248,7 +248,7 @@
         <strong>Contact</strong>
         <ul class="small">
           <li><a href="https://businessprocessconsultant.setmore.com" target="_blank" rel="noopener">Book Consultation (Setmore)</a></li>
-          <li><a href="https://wa.me/255767496147" target="_blank" rel="noopener">WhatsApp</a> <!-- TODO: replace with your number --></li>
+          <li><a href="https://wa.me/255700000000" target="_blank" rel="noopener">WhatsApp</a> <!-- TODO: replace with your number --></li>
         </ul>
       </div>
     </div>
@@ -265,22 +265,6 @@
 <script id="setmore_script" type="text/javascript" src="https://assets.setmore.com/integration/static/setmoreIframeLive.js"></script>
 <a style="float:none;display:none" id="Setmore_button_iframe" href="https://businessprocessconsultant.setmore.com"><img border="none" src="https://assets.setmore.com/integration/images/newdesign/others/book-now-button.svg" alt="Book an appointment with Business Process Consultant using Setmore" /></a>
 
-<!-- Lead magnet modal for Web3Forms -->
-<div id="lead-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);place-items:center;z-index:1100">
-  <div class="card" style="width:min(560px,92%);position:relative">
-    <button data-close-lead style="position:absolute;right:12px;top:12px;background:transparent;border:0;font-size:22px">×</button>
-    <h3 class="section-title" style="margin-top:0">Get the Free Guide</h3>
-    <p class="small">Enter your details and we’ll email you the guide to streamline operations.</p>
-    <form class="form" action="https://api.web3forms.com/submit" method="POST">
-      <!-- Web3Forms Access Key -->
-      <input type="hidden" name="access_key" value="4bdd647d-d717-48de-a46c-07de1efa8872" />
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="text" name="business" placeholder="Business (optional)">
-      <button class="btn primary" type="submit">Send Me the Guide</button>
-    </form>
-  </div>
-</div>
 
 <script src="assets/scripts.js"></script>
 <!-- Google Translate (load after callback is defined in scripts.js) -->
@@ -290,4 +274,3 @@
 </script>
 </body>
 </html>
-
