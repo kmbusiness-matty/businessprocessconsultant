@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+  <!-- FCF styles -->
+  <link href="contact-form-free-2024-1/fcf-assets/css/fcf.default.css" rel="stylesheet">
+  <link href="contact-form-free-2024-1/fcf-assets/css/fcf.default-custom.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -32,26 +35,51 @@
       <div>
         <h2 class="section-title">Contact</h2>
         <p class="section-sub">Tell me about your business and what you want to improve.</p>
-        <form class="form card" action="https://api.web3forms.com/submit" method="POST">
-          <!-- Web3Forms Access Key -->
-          <input type="hidden" name="access_key" value="4bdd647d-d717-48de-a46c-07de1efa8872" />
-          <div class="grid" style="grid-template-columns:1fr 1fr">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="text" name="business" placeholder="Business Name">
+        <!-- Integrated FreeContactForm (FCF) -->
+        <div id="contact-form" class="card">
+          <div class="fcf-body" style="padding:0">
+            <div class="fcf-form-wrap">
+              <div id="fcf-form">
+                <form class="fcf-form-class" method="post" action="contact-form-free-2024-1/fcf-assets/fcf.process.php">
+                  <div class="fcf-field">
+                    <label for="Name" class="fcf-label has-text-weight-normal">Your name</label>
+                    <div class="fcf-control">
+                      <input type="text" name="Name" id="Name" class="fcf-input is-full-width" maxlength="60" data-validate-field="Name">
+                    </div>
+                  </div>
+                  <div class="fcf-field">
+                    <label for="Email" class="fcf-label has-text-weight-normal">Your email address</label>
+                    <div class="fcf-control">
+                      <input type="email" name="Email" id="Email" class="fcf-input is-full-width" maxlength="100" data-validate-field="Email">
+                    </div>
+                  </div>
+                  <div class="fcf-field">
+                    <label for="Phone" class="fcf-label has-text-weight-normal">Your phone number (optional)</label>
+                    <div class="fcf-control">
+                      <input type="text" name="Phone" id="Phone" class="fcf-input is-full-width" maxlength="30" data-validate-field="Phone">
+                    </div>
+                  </div>
+                  <div class="fcf-field">
+                    <label for="Message" class="fcf-label has-text-weight-normal">Your message</label>
+                    <div class="fcf-control">
+                      <textarea name="Message" id="Message" class="fcf-textarea" maxlength="3000" rows="6" data-validate-field="Message"></textarea>
+                    </div>
+                  </div>
+                  <div id="fcf-status" class="fcf-status"></div>
+                  <div class="fcf-field">
+                    <div class="fcf-buttons">
+                      <button id="fcf-button" type="submit" class="fcf-button is-link is-medium is-fullwidth">Send Message</button>
+                    </div>
+                  </div>
+                  <div class="fcf-attribution">Contact Form by <a href="https://www.freecontactform.com/" class="fcf-attribution-link">FreeContactForm.com</a></div>
+                </form>
+              </div>
+              <div id="fcf-thank-you" style="display:none">
+                <p>Thanks for contacting us, we will get back in touch with you soon.</p>
+              </div>
+            </div>
           </div>
-          <div class="grid" style="grid-template-columns:1fr 1fr">
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="phone" placeholder="Phone (or WhatsApp)">
-          </div>
-          <select name="category">
-            <option value="General Inquiry">General Inquiry</option>
-            <option value="Process Audit">Process Audit</option>
-            <option value="Workflow Automation">Workflow Automation</option>
-            <option value="CRM Setup">CRM Setup</option>
-          </select>
-          <textarea name="message" rows="6" placeholder="Message" required></textarea>
-          <button class="btn primary" type="submit">Send Message</button>
-        </form>
+        </div>
         <div class="card" style="margin-top:16px;display:flex;gap:12px;align-items:center;justify-content:space-between">
           <div>
             <strong>Prefer to book directly?</strong>
@@ -85,13 +113,15 @@
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/255767496147" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
+<a class="whatsapp" href="https://wa.me/255700000000" target="_blank" rel="noopener" aria-label="WhatsApp Chat">
   <img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="WhatsApp">
 </a>
 
 <script src="assets/scripts.js"></script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+  <script src="contact-form-free-2024-1/fcf-assets/js/lang/fcf.en.js"></script>
+  <script src="contact-form-free-2024-1/fcf-assets/js/fcf.just-validate.min.js"></script>
+  <script src="contact-form-free-2024-1/fcf-assets/js/fcf.form.js"></script>
 </body>
 </html>
-
